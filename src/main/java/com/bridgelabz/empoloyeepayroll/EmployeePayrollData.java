@@ -1,4 +1,4 @@
-package org.example;
+package com.bridgelabz.empoloyeepayroll;
 
 /*
  * @desc: class for data on employee payroll

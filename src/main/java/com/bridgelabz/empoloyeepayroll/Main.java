@@ -1,4 +1,4 @@
-package org.example;
+package com.bridgelabz.empoloyeepayroll;
 
 import java.util.Scanner;
 

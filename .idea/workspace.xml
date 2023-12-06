@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f5dd24c-dbd4-4645-b0a4-890dd02dd6fd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/empoloyeepayroll/Java8WatchService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bridgelabz/empoloyeepayroll/WatchServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/bridgelabz/empoloyeepayroll/EmployeePayrollServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/empoloyeepayroll/EmployeePayrollService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/empoloyeepayroll/EmployeePayrollService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +44,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "UC2__file__api",
+    "git-widget-placeholder": "UC3__watch__service",
     "last_opened_file_path": "D:/IntelliJ IDEA 2023.2.5/lib/junit4.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -56,7 +56,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.WatchServiceTest">
+  <component name="RunManager" selected="JUnit.EmployeePayrollServiceTest.given3EmployeesWhenWrittenToFileShouldMatchEmployeeEntries">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="EmployeePayrollSystem" />
@@ -79,6 +79,22 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmployeePayrollServiceTest.given3EmployeesWhenWrittenToFileShouldMatchEmployeeEntries" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="EmployeePayrollSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bridgelabz.empoloyeepayroll.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bridgelabz.empoloyeepayroll" />
+      <option name="MAIN_CLASS_NAME" value="com.bridgelabz.empoloyeepayroll.EmployeePayrollServiceTest" />
+      <option name="METHOD_NAME" value="given3EmployeesWhenWrittenToFileShouldMatchEmployeeEntries" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -115,6 +131,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EmployeePayrollServiceTest.given3EmployeesWhenWrittenToFileShouldMatchEmployeeEntries" />
         <item itemvalue="JUnit.WatchServiceTest" />
         <item itemvalue="JUnit.NIOFileAPITest" />
         <item itemvalue="Application.com.bridgelabz.empoloyeepayroll.Main" />
@@ -130,7 +147,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1701879690459</updated>
-      <workItem from="1701879690944" duration="3595000" />
+      <workItem from="1701879690944" duration="5162000" />
     </task>
     <servers />
   </component>

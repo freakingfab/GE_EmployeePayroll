@@ -8,6 +8,6 @@ public class Main {
         EmployeePayrollService  employeePayrollService = new EmployeePayrollService();
         Scanner consoleInputReader = new Scanner(System.in);
         employeePayrollService.readEmployeePayrollData(consoleInputReader);
-        employeePayrollService.writeEmployeePayrollData();
+//        employeePayrollService.writeEmployeePayrollData();
     }
 }

@@ -1,5 +1,9 @@
 package com.bridgelabz.empoloyeepayroll;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -44,13 +48,70 @@ public class EmployeePayrollService {
         employeePayrollList.add(new EmployeePayrollData(id,name,salary));
     }
 
+
     /*
-     * @desc: function to display data on console
+     * @desc: function to write employee payroll data to a file in the "data" folder
      * @params: none
      * @return: void
      */
-    public void writeEmployeePayrollData(){
-        System.out.println("Writing employee data on console");
-        employeePayrollList.stream().forEach(emp -> System.out.println(emp.toString()));
+    public void writeEmployeePayrollDataToFile() {
+        String folderPath = "data/";
+        String filePath = folderPath + "employee_payroll.txt";
+
+        // Create the "data" folder if it doesn't exist
+        File folder = new File(folderPath);
+        if (!folder.exists()) {
+            folder.mkdirs();
+        }
+
+        try (FileWriter fileWriter = new FileWriter(filePath)) {
+            employeePayrollList.forEach(emp -> {
+                String employeeData = emp.toString() + "\n";
+                try {
+                    fileWriter.write(employeeData);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            });
+            System.out.println("Employee payroll data written to file successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /*
+     * @desc: function to count the number of entries in the file
+     * @params: none
+     * @return: long
+     */
+    public long countEntries() {
+        long entries = 0;
+        String filePath = "data/employee_payroll.txt";
+
+        try (Scanner fileScanner = new Scanner(new File(filePath))) {
+            while (fileScanner.hasNextLine()) {
+                entries++;
+                fileScanner.nextLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return entries;
+    }
+
+    /*
+        @desc: function to read and print data
+        @params: none
+        @return: none
+     */
+    public void printData(){
+        try {
+            Files.lines(new File("data/employee_payroll.txt").toPath())
+                    .forEach(System.out::println);
+        }
+        catch(IOException e){
+            // handle exception
+        }
     }
 }

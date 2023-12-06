@@ -1,8 +1,11 @@
 package com.bridgelabz.empoloyeepayroll;
 
+import org.apache.commons.io.FileUtils;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
@@ -64,16 +67,9 @@ public class EmployeePayrollService {
             folder.mkdirs();
         }
 
-        try (FileWriter fileWriter = new FileWriter(filePath)) {
-            employeePayrollList.forEach(emp -> {
-                String employeeData = emp.toString() + "\n";
-                try {
-                    fileWriter.write(employeeData);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            });
-            System.out.println("Employee payroll data written to file successfully.");
+        try (PrintWriter writer = new PrintWriter(new FileWriter("data/employee_payroll.txt", true))) {
+            employeePayrollList.forEach(emp -> writer.println(emp.toString()));
+            System.out.println("Written objects on the file");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -85,19 +81,14 @@ public class EmployeePayrollService {
      * @return: long
      */
     public long countEntries() {
-        long entries = 0;
-        String filePath = "data/employee_payroll.txt";
-
-        try (Scanner fileScanner = new Scanner(new File(filePath))) {
-            while (fileScanner.hasNextLine()) {
-                entries++;
-                fileScanner.nextLine();
-            }
+        long entryCount = 0;
+        try {
+            List<String> payrollLines = FileUtils.readLines(FileUtils.getFile("data/employee_payroll.txt"), "UTF-8");
+            entryCount = payrollLines.size();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        return entries;
+        return entryCount;
     }
 
     /*
@@ -106,12 +97,12 @@ public class EmployeePayrollService {
         @return: none
      */
     public void printData(){
+        System.out.println("Printing employee payrolls from file:");
         try {
-            Files.lines(new File("data/employee_payroll.txt").toPath())
-                    .forEach(System.out::println);
-        }
-        catch(IOException e){
-            // handle exception
+            List<String> payrollLines = FileUtils.readLines(FileUtils.getFile("data/employee_payroll.txt"), "UTF-8");
+            payrollLines.forEach(System.out::println);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

@@ -7,9 +7,8 @@ public class Main {
         System.out.println("Welcome to Employee Payroll System");
         Scanner consoleInputReader = new Scanner(System.in);
         EmployeePayrollService employeePayrollService = new EmployeePayrollService();
-        employeePayrollService.readEmployeePayrollData(consoleInputReader);
-        employeePayrollService.writeEmployeePayrollDataToFile();
-        employeePayrollService.printData();
+        employeePayrollService.readEmployeePayrollDataFromFile();
+        employeePayrollService.printEmployeePayroll();
         employeePayrollService.countEntries();
     }
 }

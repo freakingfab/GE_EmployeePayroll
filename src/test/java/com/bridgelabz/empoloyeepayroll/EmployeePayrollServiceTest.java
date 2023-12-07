@@ -26,4 +26,16 @@ public class EmployeePayrollServiceTest {
         Assert.assertEquals(3,entries);
     }
 
+    /*
+        @desc: testing read from file
+        @params: none
+        @return: none
+     */
+    @Test
+    public void givenFileOnReadingFromFileShouldMatchEmployeeCount(){
+        EmployeePayrollService employeePayrollService = new EmployeePayrollService();
+        employeePayrollService.readEmployeePayrollDataFromFile();
+        long entries = employeePayrollService.employeePayrollList.size();
+        Assert.assertEquals(3,entries);
+    }
 }

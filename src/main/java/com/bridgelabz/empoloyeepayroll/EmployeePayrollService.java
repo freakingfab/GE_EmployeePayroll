@@ -7,6 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -16,7 +17,7 @@ import java.util.Scanner;
  */
 public class EmployeePayrollService {
     public enum IOService {CONSOLE_IO, FILE_IO, DB_IO, REST_IO}
-    private List<EmployeePayrollData> employeePayrollList;
+    public List<EmployeePayrollData> employeePayrollList;
 
     /*
      * @desc: constructor for class
@@ -41,7 +42,7 @@ public class EmployeePayrollService {
      * @params: Scanner object
      * @return: void
      */
-    public void readEmployeePayrollData(Scanner consoleInputReader){
+    public void readEmployeePayrollDataFromConsole(Scanner consoleInputReader){
         System.out.print("Enter the Employee id: ");
         int id = consoleInputReader.nextInt();
         System.out.print("Enter the Employee name: ");
@@ -51,6 +52,22 @@ public class EmployeePayrollService {
         employeePayrollList.add(new EmployeePayrollData(id,name,salary));
     }
 
+    /*
+     * @desc: function to read data from file
+     * @params: Scanner object
+     * @return: void
+     */
+    public void readEmployeePayrollDataFromFile() {
+        try {
+            Files.lines(Paths.get("data/employee_payroll.txt"))
+                    .map(line -> line.trim().split(","))
+                    .map(data -> new EmployeePayrollData(Integer.parseInt(data[0].trim()), data[1].trim(), Double.parseDouble(data[2].trim())))
+                    .forEach(employeePayrollList::add);
+            System.out.println("Reading employee data from file");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     /*
      * @desc: function to write employee payroll data to a file in the "data" folder
@@ -104,5 +121,15 @@ public class EmployeePayrollService {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    /*
+        @desc: function to print data
+        @params: none
+        @return: none
+     */
+    public void printEmployeePayroll(){
+        System.out.println("Printing employee payrolls from list:");
+        employeePayrollList.forEach(emp -> System.out.println(emp.toString()));
     }
 }

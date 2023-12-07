@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9f5dd24c-dbd4-4645-b0a4-890dd02dd6fd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/employee_payroll.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/employee_payroll.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/empoloyeepayroll/EmployeePayrollService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/empoloyeepayroll/EmployeePayrollService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/empoloyeepayroll/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/empoloyeepayroll/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/bridgelabz/empoloyeepayroll/EmployeePayrollServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/bridgelabz/empoloyeepayroll/EmployeePayrollServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +47,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "UC4__object__file__addition",
+    "git-widget-placeholder": "UC5__file__io__count__write",
     "last_opened_file_path": "D:/IntelliJ IDEA 2023.2.5/lib/junit4.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -57,20 +59,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.com.bridgelabz.empoloyeepayroll.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
-      <module name="EmployeePayrollSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.EmployeePayrollServiceTest.givenFileOnReadingFromFileShouldMatchEmployeeCount">
     <configuration name="com.bridgelabz.empoloyeepayroll.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.bridgelabz.empoloyeepayroll.Main" />
       <module name="EmployeePayrollSystem" />
@@ -95,6 +84,22 @@
       <option name="PACKAGE_NAME" value="com.bridgelabz.empoloyeepayroll" />
       <option name="MAIN_CLASS_NAME" value="com.bridgelabz.empoloyeepayroll.EmployeePayrollServiceTest" />
       <option name="METHOD_NAME" value="given3EmployeesWhenWrittenToFileShouldMatchEmployeeEntries" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmployeePayrollServiceTest.givenFileOnReadingFromFileShouldMatchEmployeeCount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="EmployeePayrollSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bridgelabz.empoloyeepayroll.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bridgelabz.empoloyeepayroll" />
+      <option name="MAIN_CLASS_NAME" value="com.bridgelabz.empoloyeepayroll.EmployeePayrollServiceTest" />
+      <option name="METHOD_NAME" value="givenFileOnReadingFromFileShouldMatchEmployeeCount" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -132,11 +137,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EmployeePayrollServiceTest.givenFileOnReadingFromFileShouldMatchEmployeeCount" />
         <item itemvalue="Application.com.bridgelabz.empoloyeepayroll.Main" />
         <item itemvalue="JUnit.EmployeePayrollServiceTest.given3EmployeesWhenWrittenToFileShouldMatchEmployeeEntries" />
         <item itemvalue="JUnit.WatchServiceTest" />
         <item itemvalue="JUnit.NIOFileAPITest" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -148,7 +153,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1701879690459</updated>
-      <workItem from="1701879690944" duration="6016000" />
+      <workItem from="1701879690944" duration="7511000" />
     </task>
     <servers />
   </component>
